@@ -1,14 +1,14 @@
 <html><head>
 <style>
-    body {
-        font-family: 'MS Sans Serif', sans-serif;
-        background-image: url('base.png');
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-        padding: 20px;
-        color: #000;
-    }
+body {
+    font-family: 'MS Sans Serif', sans-serif;
+    background-image: url('base.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 20px;
+    color: #000;
+}
 
 .window {
     background-color: #c0c0c0;
@@ -305,6 +305,46 @@
 .en .en-content {
     display: block;
 }
+
+.resume-button {
+  background-color: #c0c0c0;
+  border: 2px solid #fff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  padding: 2px 8px;
+  cursor: pointer;
+  box-shadow: inset -1px -1px #0a0a0a,
+              inset 1px 1px #fff;
+  color: #000080;
+  font-weight: bold;
+  margin-left: 10px;
+  position: relative;
+  top: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.resume-popup {
+  display: none;
+  position: absolute;
+  background: #ffffcc;
+  border: 2px solid #000;
+  padding: 15px;
+  border-radius: 5px;
+  max-width: 400px;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+  z-index: 1000;
+  box-shadow: inset -1px -1px #0a0a0a,
+              inset 1px 1px #fff;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.resume-popup.show {
+  display: block;
+}
 </style>
 </head>
 <body class="ru">
@@ -314,10 +354,30 @@
         <span class="ru-content">&#x41e; &#x441;&#x435;&#x431;&#x435;</span>
         <span class="en-content">About me</span>
         <button class="language-button">RU</button>
+        <button class="resume-button">
+          <span class="ru-content">&#x41a;&#x440;&#x430;&#x442;&#x43a;&#x43e;&#x435; &#x440;&#x435;&#x437;&#x44e;&#x43c;&#x435;</span>
+          <span class="en-content">Brief Resume</span>
+          <div class="resume-popup">
+            <span class="ru-content">
+              &#x421;&#x442;&#x440;&#x430;&#x43d;&#x430; &#x440;&#x430;&#x431;&#x43e;&#x442;&#x44b;: &#x411;&#x435;&#x43b;&#x430;&#x440;&#x443;&#x441;&#x44c;, &#x420;&#x43e;&#x441;&#x441;&#x438;&#x44f;.<br><br>
+              &#x41e;&#x431;&#x440;&#x430;&#x437;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435;: &quot;&#x41c;&#x43e;&#x433;&#x438;&#x43b;&#x435;&#x432;&#x441;&#x43a;&#x438;&#x439; &#x433;&#x43e;&#x441;&#x443;&#x434;&#x430;&#x440;&#x441;&#x442;&#x432;&#x435;&#x43d;&#x43d;&#x44b;&#x439; &#x43a;&#x43e;&#x43b;&#x43b;&#x435;&#x434;&#x436; &#x438;&#x441;&#x43a;&#x443;&#x441;&#x441;&#x442;&#x432;&quot;, &#x434;&#x438;&#x437;&#x430;&#x439;&#x43d;&#x435;&#x440;/&#x443;&#x447;&#x438;&#x442;&#x435;&#x43b;&#x44c; &#x440;&#x438;&#x441;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x44f;.<br><br>
+              &#x41a;&#x443;&#x440;&#x441;&#x44b;: &#x42f;&#x43d;&#x434;&#x435;&#x43a;&#x441; &#x41f;&#x440;&#x430;&#x43a;&#x442;&#x438;&#x43a;&#x443;&#x43c; - QA Engineer.<br><br>
+              4 &#x433;&#x43e;&#x434;&#x430; &#x43e;&#x43f;&#x44b;&#x442;&#x430; &#x440;&#x430;&#x431;&#x43e;&#x442;&#x44b; 3&#x434; &#x445;&#x443;&#x434;&#x43e;&#x436;&#x43d;&#x438;&#x43a;&#x43e;&#x43c; &#x43f;&#x43e; &#x43f;&#x435;&#x440;&#x441;&#x43e;&#x43d;&#x430;&#x436;&#x430;&#x43c;, &#x441;&#x435;&#x439;&#x447;&#x430;&#x441; &#x43c;&#x43b;&#x430;&#x434;&#x448;&#x438;&#x439; &#x442;&#x435;&#x441;&#x442;&#x438;&#x440;&#x43e;&#x432;&#x449;&#x438;&#x43a;.<br><br>
+              &#x425;&#x43e;&#x440;&#x43e;&#x448;&#x43e; &#x443;&#x436;&#x438;&#x432;&#x430;&#x44e;&#x441;&#x44c; &#x432; &#x43a;&#x43e;&#x43c;&#x430;&#x43d;&#x434;&#x435;, &#x43b;&#x435;&#x433;&#x43a;&#x43e; &#x43f;&#x43e;&#x434;&#x441;&#x442;&#x440;&#x430;&#x438;&#x432;&#x430;&#x44e;&#x441;&#x44c; &#x43f;&#x43e;&#x434; &#x440;&#x430;&#x437;&#x43d;&#x44b;&#x435; &#x43f;&#x430;&#x439;&#x43f;&#x43b;&#x430;&#x439;&#x43d;&#x44b;, &#x43e;&#x442;&#x43b;&#x438;&#x447;&#x43d;&#x43e; &#x43e;&#x440;&#x438;&#x435;&#x43d;&#x442;&#x438;&#x440;&#x443;&#x44e;&#x441;&#x44c; &#x432; &#x43d;&#x43e;&#x432;&#x44b;&#x445; &#x43f;&#x440;&#x43e;&#x433;&#x440;&#x430;&#x43c;&#x43c;&#x430;&#x445;, &#x434;&#x43e;&#x43a;&#x43e;&#x43f;&#x430;&#x44e;&#x441;&#x44c; &#x434;&#x43e; &#x43a;&#x430;&#x436;&#x434;&#x43e;&#x439; &#x434;&#x435;&#x442;&#x430;&#x43b;&#x438;.
+            </span>
+            <span class="en-content">
+              Work countries: Belarus, Russia.<br><br>
+              Education: &quot;Mogilev State College of Arts&quot;, designer/art teacher.<br><br>
+              Courses: Yandex Practicum - QA Engineer.<br><br>
+              4 years experience as 3D character artist, currently junior QA engineer.<br><br>
+              Great team player, easily adapt to different pipelines, quick learner with new programs, very detail-oriented.
+            </span>
+          </div>
+        </button>
         <a href="https://foxylove3d.github.io/BunnyGame/" class="close-button" title="Close"></a>
     </div>
     <div class="profile-section">
-        <img src="GtBUKsJuduc.jpg" class="profile-photo" alt="Profile photo">
+        <img src="/GtBUKsJuduc.jpg" class="profile-photo" alt="Profile photo">
         <p class="location-text">
             <span class="ru-content">&#x411;&#x435;&#x43b;&#x430;&#x440;&#x443;&#x441;&#x44c;, &#x41c;&#x43e;&#x433;&#x438;&#x43b;&#x435;&#x432;       25.05.2000</span>
             <span class="en-content">Belarus, Mogilev       25.05.2000</span>
@@ -451,6 +511,17 @@ langButton.addEventListener('click', function () {
     this.textContent = 'RU';
   }
   updateMessage();
+});
+const resumeButton = document.querySelector('.resume-button');
+const resumePopup = document.querySelector('.resume-popup');
+resumeButton.addEventListener('click', function (e) {
+  e.stopPropagation();
+  resumePopup.classList.toggle('show');
+});
+document.addEventListener('click', function (e) {
+  if (!resumePopup.contains(e.target) && !resumeButton.contains(e.target)) {
+    resumePopup.classList.remove('show');
+  }
 });</script>
 
 </body></html>
